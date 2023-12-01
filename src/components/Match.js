@@ -11,7 +11,7 @@ function Match(props) {
   const [inputText, setInputText] = useState('');
 
   const betOnClick = (event, id) => {
-    document.querySelectorAll('.bet-button').forEach((e) => {
+    document.querySelectorAll(`.game-${props.number} .bet-button`).forEach((e) => {
       if (e == event.currentTarget) {
         return;
       }
@@ -42,7 +42,7 @@ function Match(props) {
 
     if (isNaN(value) || value + '' != input) {
       if( match.bet.bet != undefined) {
-        setInputText( match.bet.bet);
+        setInputText(match.bet.bet);
         console.log( 'setted 1');
       } else {
         setInputText('');
@@ -62,7 +62,7 @@ function Match(props) {
 
 
   return (
-    <div className="match">
+    <div className={`match game-${props.number}` }>
       <p className="game-text">Jogo {props.number}</p>
       <p className="bet-text">Escolha um vencedor e faça uma aposta</p>
       <div className="countries">
@@ -89,7 +89,7 @@ function Match(props) {
           <p className="country-text">{match.team2.name}</p>
           <div className="force">
             <p>Força da equipe:</p>
-            <p>{(~~match.team1.force).toLocaleString('de-DE')}</p>
+            <p>{(~~match.team2.force).toLocaleString('de-DE')}</p>
           </div>
           <div onClick={(e) => betOnClick(e, match.team2.id)} className="bet-button">
             <div className="out-circle">

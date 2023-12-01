@@ -67,7 +67,7 @@ export function generateWinner(match: Match) {
 
 function genereateCoefficients(team1: Team, team2: Team) {
     let k1 = 1.25 + (1.45 - 1.25) * Math.random();
-    let k2 = 1.95 + (1.95 - 1.55) * Math.random();
+    let k2 = 1.6 + (1.8 - 1.6) * Math.random();
 
     if(team1.force < team2.force) {
         [k1, k2] = [k2, k1];
