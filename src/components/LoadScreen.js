@@ -3,14 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 
 function LoadScreen() {
-  const [fill, setFill] = useState(1 / 5);
+  const [fill, setFill] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
-    //test animation and navigatings
-    setTimeout(() => setFill(0.5), 500);
-    setTimeout(() => setFill(1), 1500);
-    setTimeout(() => navigate('/menu'), 1500+500);
+    setTimeout(() => setFill(1), 300);
+    setTimeout(() => navigate('/menu'), 750);
   }, []);
 
   return (

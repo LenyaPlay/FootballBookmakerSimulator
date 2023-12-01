@@ -3,13 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 
 function LoadResultScreen() {
-  const [fill, setFill] = useState(1 / 5);
+  const [fill, setFill] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
-    //test animation and navigatings
-    setTimeout(() => setFill(0.5), 500);
-    setTimeout(() => navigate('/period_result'), 2000);
+    setTimeout(() => setFill(1), 300);
+    setTimeout(() => navigate('/period_result'), 750);
   }, []);
 
   return (

@@ -486,8 +486,16 @@ html {
   text-align: center;
   text-transform: uppercase;
 
-  color: #5DD200;
-
-
+  color: #fff;
 }
+
+
+.final-screen .result>.number.win {
+  color: #5DD200;
+}
+
+.final-screen .result>.number.lose {
+  color: #F00;
+}
+
 

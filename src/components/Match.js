@@ -28,7 +28,6 @@ function Match(props) {
       event.currentTarget.querySelector('.inner-circle').classList.remove('none');
       match.bet.id = id;
     }
-
   }
 
   const onChangeInput = (event) => {
@@ -72,7 +71,7 @@ function Match(props) {
           <p className="country-text">{match.team1.name}</p>
           <div className="force">
             <p>Força da equipe:</p>
-            <p>160</p>
+            <p>{(~~match.team1.force).toLocaleString('de-DE')}</p>
           </div>
           <div onClick={(e) => betOnClick(e, match.team1.id)} className="bet-button">
             <div className="out-circle">
@@ -80,7 +79,7 @@ function Match(props) {
             </div>
             <div>
               <p>Vencedor 1</p>
-              <p>Relação {match.k1.toFixed(2)}</p>
+              <p>Relação {match.team1.k.toFixed(2)}</p>
             </div>
           </div>
         </div>
@@ -90,7 +89,7 @@ function Match(props) {
           <p className="country-text">{match.team2.name}</p>
           <div className="force">
             <p>Força da equipe:</p>
-            <p>160</p>
+            <p>{(~~match.team1.force).toLocaleString('de-DE')}</p>
           </div>
           <div onClick={(e) => betOnClick(e, match.team2.id)} className="bet-button">
             <div className="out-circle">
@@ -98,7 +97,7 @@ function Match(props) {
             </div>
             <div>
               <p>Vencedor 2</p>
-              <p>Relação {match.k2.toFixed(2)}</p>
+              <p>Relação {match.team2.k.toFixed(2)}</p>
             </div>
           </div>
         </div>

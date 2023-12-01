@@ -26,21 +26,21 @@ function getEmptyBet(): bet {
 
 export const TEAMS: Team[] = [
     { id: 0, name: 'Argentina', image: 'flags/Argentina.png', force: 0 },
-    { id: 1, name: 'França', image: '/flags/France.png', force: 0 },
-    { id: 2, name: 'Brasil', image: '/flags/Brazil.png', force: 0 },
-    { id: 3, name: 'Inglaterra', image: '/flags/England.png', force: 0 },
-    { id: 4, name: 'Bélgica', image: '/flags/Belgium.png', force: 0 },
-    { id: 5, name: 'Portugal', image: '/flags/Portugal.png', force: 0 },
-    { id: 6, name: 'Países Baixos', image: '/flags/Netherlands.png', force: 0 },
-    { id: 7, name: 'Espanha', image: '/flags/Spain.png', force: 0 },
-    { id: 8, name: 'Itália', image: '/flags/Italy.png', force: 0 },
-    { id: 9, name: 'Croácia', image: '/flags/Croatia.png', force: 0 },
-    { id: 10, name: 'EUA', image: '/flags/USA.png', force: 0 },
-    { id: 11, name: 'México', image: '/flags/Mexico.png', force: 0 },
-    { id: 12, name: 'Marrocos', image: '/flags/Morocco.png', force: 0 },
-    { id: 13, name: 'Suíça', image: '/flags/Switzerland.png', force: 0 },
-    { id: 14, name: 'Uruguai', image: '/flags/Uruguay.png', force: 0 },
-    { id: 15, name: 'Alemanha', image: '/flags/Germany.png', force: 0 },
+    { id: 1, name: 'França', image: 'flags/France.png', force: 0 },
+    { id: 2, name: 'Brasil', image: 'flags/Brazil.png', force: 0 },
+    { id: 3, name: 'Inglaterra', image: 'flags/England.png', force: 0 },
+    { id: 4, name: 'Bélgica', image: 'flags/Belgium.png', force: 0 },
+    { id: 5, name: 'Portugal', image: 'flags/Portugal.png', force: 0 },
+    { id: 6, name: 'Países Baixos', image: 'flags/Netherlands.png', force: 0 },
+    { id: 7, name: 'Espanha', image: 'flags/Spain.png', force: 0 },
+    { id: 8, name: 'Itália', image: 'flags/Italy.png', force: 0 },
+    { id: 9, name: 'Croácia', image: 'flags/Croatia.png', force: 0 },
+    { id: 10, name: 'EUA', image: 'flags/USA.png', force: 0 },
+    { id: 11, name: 'México', image: 'flags/Mexico.png', force: 0 },
+    { id: 12, name: 'Marrocos', image: 'flags/Morocco.png', force: 0 },
+    { id: 13, name: 'Suíça', image: 'flags/Switzerland.png', force: 0 },
+    { id: 14, name: 'Uruguai', image: 'flags/Uruguay.png', force: 0 },
+    { id: 15, name: 'Alemanha', image: 'flags/Germany.png', force: 0 },
 ];
 
 function generateForces(teams: Team[]) {
@@ -77,8 +77,7 @@ function genereateCoefficients(team1: Team, team2: Team) {
     team2.k = k2;
 }
 
-export function genereateMatches() {
-    let teams = TEAMS;
+export function genereateMatches(teams: Team[]) {
     if (teams.length % 2 == 1) {
         console.log('teams count is odd');
         return [];
@@ -134,4 +133,12 @@ export function setPoints(points: number) {
         return;
     }
     localStorage.setItem('points', points + '');
+}
+
+export function setPointsBeforeChampionship(points: number) {
+    localStorage.setItem('points_before_championship', points + '');
+}
+export function getPointsBeforeChampionship() {
+    let result = localStorage.getItem('points_before_championship');
+    return result != null ? parseInt(result) : 0;
 }

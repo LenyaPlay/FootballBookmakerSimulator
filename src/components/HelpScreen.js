@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setPeriod, setPoints } from "../Utils";
 
-function MenuScreen() {
+function HelpScreen() {
   const navigate = useNavigate();
   const [_, setRerender] = useState(0);
 
@@ -16,17 +16,12 @@ function MenuScreen() {
     setPeriod([]);
   }
 
-  const onHelpClick = (e) => {
-    navigate('/help');
-  }
-
-
   return (
     <div className="menu-screen">
       <div className="center">
         <button onClick={onPlayClick}className="default-button">Jogar o Campeonato</button>
         <button onClick={resetPoints} className="default-button">Repor os óculos</button>
-        <button onClick={onHelpClick} className="default-button">Um pouco de treino</button>
+        <button className="default-button">Um pouco de treino</button>
 
         {/* <button onClick={() => {setFill(Math.random())}}>de</button> */}
       </div>
@@ -34,4 +29,4 @@ function MenuScreen() {
   );
 }
 
-export default MenuScreen;
+export default HelpScreen;
