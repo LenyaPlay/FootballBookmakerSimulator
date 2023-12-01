@@ -2,22 +2,20 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-function LoadScreen() {
+function LoadResultScreen() {
   const [fill, setFill] = useState(1 / 5);
   const navigate = useNavigate();
 
   useEffect(() => {
     //test animation and navigatings
     setTimeout(() => setFill(0.5), 500);
-    setTimeout(() => setFill(1), 1500);
-    setTimeout(() => navigate('/menu'), 1500+500);
+    setTimeout(() => navigate('/period_result'), 2000);
   }, []);
 
   return (
-    <div className="load-screen">
+    <div className="load-result-screen">
       <div className="center">
-        <p>Hora de fazer</p>
-        <p className="main-text" >aposta vencedora</p>
+        <p className="main-text" >Carregando <br/> resultados</p>
         <div className="progress-bar">
           <div style={{
             width: fill * 100 + '%',
@@ -28,4 +26,4 @@ function LoadScreen() {
   );
 }
 
-export default LoadScreen;
+export default LoadResultScreen;
