@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import LoadScreen from './components/LoadScreen';
 import './App.css';
+import MenuScreen from './components/MenuScreen';
+import PeriodScreen from './components/PeriodScreen';
+import FinalScreen from './components/FinalScreen';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (<BrowserRouter>
+    <Routes>
+      <Route path="/" element={<LoadScreen />} />
+      <Route path="menu" element={<MenuScreen />} />
+      <Route path="period" element={<PeriodScreen />} />
+      <Route path="final" element={<FinalScreen />} />
+    </Routes>
+  </BrowserRouter>);
 }
 
 export default App;

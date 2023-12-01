@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*Normalize*/
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/*Normalize*/
+
+@font-face {
+  font-family: 'Futura Book';
+  src:  url(./fonts/FuturaBook.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'FuturicaBS';
+  src:  url(./fonts/afuturicabsbold.ttf);
+}
+
+
