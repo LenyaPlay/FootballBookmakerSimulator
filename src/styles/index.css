@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#3F3F3F, #000000);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*Normalize*/
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/*Normalize*/
+
+@font-face {
+  font-family: 'Futura Book';
+  src:  url(./fonts/FUTURA\ BK\ BT\ BOOK.TTF) format("opentype");
+}
+
+@font-face {
+  font-family: 'FuturicaBS';
+  src:  url(./fonts/FUTURA\ MD\ BT\ MEDIUM.TTF);
+}
+
+
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-weight: normal;
+  src:  url(./fonts/centurygothic.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-weight: bold;
+  src:  url(./fonts/centurygothic_bold.ttf);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+* {
+  font-family: 'Futura Book';
+}
+

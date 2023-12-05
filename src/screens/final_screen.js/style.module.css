@@ -1,0 +1,158 @@
+.finalScreen .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+
+
+.finalScreen {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg {
+    background-image: url("src/assets/default_design/bg2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg.blue {
+    background-image: linear-gradient(0deg, #00427Ef0, #00427Ef0),
+    url("src/assets/blue_design/bg.png");
+    background-position: 35%;
+}
+  
+.finalText {
+    font-family: 'FuturicaBs';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFC700;
+}
+
+.blue .finalText {
+    color: #FFF;
+}
+
+
+
+.result {
+    margin-top: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+
+    color: #FFFFFF;
+}
+
+
+.result {
+    margin-top: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+
+    color: #FFFFFF;
+}
+
+.blue .result {
+    background-color: #FFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 300px;
+    padding: 5px 54px;
+}
+
+.blue .result.win {
+    background: #5DD200;
+    border: 3px solid #FFFFFF;
+    border-radius: 300px;
+    padding: 5px 54px;
+}
+
+.blue .result.lose {
+    background: #FF0000;
+    border: 3px solid #FFFFFF;
+    border-radius: 300px;
+    padding: 5px 54px;
+}
+
+
+.result>.text {
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.result>.number {
+    margin-top: 5px;
+    font-family: 'FuturicaBs';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.win {
+    color: #5DD200;
+}
+
+.lose {
+    color: #FF0000;
+}
+
+
+.blue .win {
+    color: #fff;
+    font-family: 'FuturicaBs';
+    font-weight: bold;
+    background-color: #5DD200;
+}
+
+.blue .lose  {
+    color: #fff;
+    font-family: 'FuturicaBs';
+    font-weight: bold;
+    background-color: #FF0000;
+}
+
+
+.draw {
+    color: #FFF;
+}
+
+.finalScreen .result>.number.win {
+    color: #5DD200;
+  }
+  
+.finalScreen .result>.number.lose {
+color: #F00;
+}
+  

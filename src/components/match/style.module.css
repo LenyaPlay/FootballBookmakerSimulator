@@ -1,0 +1,435 @@
+.matchContainer {
+    width: 100%;
+}
+
+.matchContainer.blue {
+    width: 100%;
+    padding: 18px 18px 9px 18px;
+    box-sizing: border-box;
+}
+
+
+.match {
+    transition: top 250ms ease-out;
+    top: 0%;
+    position: relative;
+    opacity: 0;
+
+    padding: 20px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(168.55deg, rgba(63, 63, 63, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 15px 15px 0px 0px;
+}
+
+
+.match.blue {
+    background: #EBF6FF;
+    border-radius: 15px;
+}
+
+.countryImage {
+    background-color: #fff;
+    border: 2px solid #FFC700;
+    object-fit: cover;
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
+    border-radius: 50%;
+}
+
+.countryImage.blue {
+    border: none;
+    filter: none;
+}
+
+
+.winImage {
+    position: absolute;
+    top: -20px;
+    width: 50%;
+
+    border: 2px solid #FFC700;
+    filter: drop-shadow(0px 0px 15px #FFC700);
+    border-radius: 50%;
+}
+
+.blue .winImage {
+    position: absolute;
+    top: -35%;
+    left: 25%;
+    width: 50%;
+
+    border: none;
+    filter: none;
+    border: none;
+    border-radius: 0;
+}
+
+.winImage.left {
+    left: -20px;
+}
+
+
+.winImage.right {
+    right: -20px;
+}
+
+
+.countryText {
+    margin-top: -25px;
+    z-index: 0;
+    width: 90%;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.blueCountryText {
+    margin-top: -25px;
+    z-index: 0;
+    width: 90%;
+    box-sizing: border-box;
+
+    padding: 7px 0px;
+
+
+    border-radius: 50px;
+
+
+    background: #00427E;
+    border: 2px solid #FFFFFF;
+
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.countries {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.force {
+    font-family: 'FuturicaBS';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #FFC700;
+}
+
+.force.blue {
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    color: #00427E;
+}
+
+.divider {
+    background-color: #595959;
+    width: 1px;
+    height: 70%;
+}
+
+.divider.blue {
+    height: 65%;
+}
+
+.gameText {
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.gameText.blue {
+    color: #00427E;
+}
+
+.betText {
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 7px;
+}
+
+.betText.blue {
+    color: #00427E;
+}
+
+.country {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.betButton {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+
+    background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
+    border: 2px solid #FFC700;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+
+
+.blueBetButton {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 23px;
+
+    background: #fff;
+    border: none;
+
+    padding: 10px 5px;
+
+    box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 50px;
+}
+
+.blueBetButton.active {
+    background: #fff;
+    border-radius: 50px;
+}
+
+.betButton.active {
+    background: #3D3D3D;
+    border: 2px solid #FFC700;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5), inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+
+.input {
+    width: 100%;
+    margin-top: 16px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #3D3D3D;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5), inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    border-width: 0px;
+    color: #fff;
+}
+
+
+.input:focus {
+    outline: none;
+}
+
+.betButton .outCircle {
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border: 1px solid #595959;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+    padding: 4px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.betButton .innerCircle {
+    background-color: #FFC700;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transition: height 150ms ease-out, width 150ms ease-out;
+}
+
+.betButton .innerCircle.none {
+    width: 0%;
+    height: 0%;
+}
+
+
+.blueBetButton .outCircle {
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border: 2px solid #EBF6FF;
+    padding: 5px;
+    border-radius: 50%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blueBetButton .innerCircle {
+    background-color: #00427E;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transition: height 150ms ease-out, width 150ms ease-out;
+}
+
+.blueBetButton .innerCircle.none {
+    width: 0%;
+    height: 0%;
+}
+
+
+.betButton p {
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 13px;
+    color: #FFFFFF;
+    line-height: 15px;
+}
+
+.blueBetButton p {
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 13px;
+    color: #00427E;
+    line-height: 15px;
+}
+
+.goalText {
+    margin: 8px;
+    color: #FFC700;
+    font-size: 24px;
+    font-family: FuturicaBS;
+}
+
+.blue .goalText {
+    color: #00427E;
+}
+
+.moneyText {
+    min-width: 30%;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.blue .moneyText {
+    box-shadow: none;
+    border: 2px solid #FFFFFF;
+    background: none;
+    border-radius: 100px;
+}
+
+
+.moneyText.win {
+    color: #5DD200;
+}
+
+.moneyText.lose {
+    color: #FF0000;
+}
+
+
+.blue .moneyText.win {
+    color: #fff;
+    font-family: 'FuturicaBs';
+    font-weight: bold;
+    background-color: #5DD200;
+}
+
+.blue .moneyText.lose  {
+    color: #fff;
+    font-family: 'FuturicaBs';
+    font-weight: bold;
+    background-color: #FF0000;
+}
+
+
+.moneyText.draw {
+    color: #FFF;
+}
+
+.button {
+    background: #FFFFFF;
+    border-radius: 300px;
+    padding: 14px 0px;
+    width: 100%;
+    border-width: 0px;
+    margin-top: 18px;
+    color: #00427E;
+    font-size: 20px;
+}
+
+.button:active {
+    background: #EBF6FF;
+    box-shadow: inset 0px 0px 10px rgba(5, 33, 89, 0.6);
+    border-radius: 300px;
+}
+
+.blueInput {
+    width: 100%;
+    margin-top: 16px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border-width: 0px;
+    color: #00427E80;
+
+    background: #FFFFFF;
+    border-radius: 300px;
+}
+
+
+.blueInput:focus {
+    outline: none;
+}
+
+.matchResult {
+    padding-bottom: 0px;
+}
+
+.matchResult .moneyText{
+    margin-bottom: -10px;
+}
