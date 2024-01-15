@@ -2,14 +2,15 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Match from "../../components/match/Match";
 import MatchResult from "../../components/match/MatchResult";
-import { TEAMS, generateForces, genereateMatches, getPeriod, getPoints, hasPeriod, setPeriod } from "../../utils/Utils";
+import { TEAMS, getPoints} from "../../utils/Utils";
 import style from "./style.module.css"
+import LoadResultScreenV3 from "../load_screen/LoadResultScreenV3";
 
 function PeriodResultScreen(props) {
     const [periodBorderHeight, setPeriodBorderHeight] = useState(-1);
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(true);
 
-    const [matches, setMatches] = useState(getPeriod());
     const [points, _] = useState(getPoints());
 
     useEffect(() => {
@@ -23,11 +24,12 @@ function PeriodResultScreen(props) {
             navigate('/final');
         } else {
             setPeriod(genereateMatches(teams));
-            navigate('/period');
+            navigate();
         }
     }
 
-    return (
+    return ( loading ?
+        <LoadResultScreenV3 endLoading={() => {setLoading(false)}}></LoadResultScreenV3> :
         <div className={style.periodScreen}>
             <div className={style.periodBorderContainer}>
                 <div style={{ top: periodBorderHeight * 100 + '%' }} className={`${style.periodBorder}`}>

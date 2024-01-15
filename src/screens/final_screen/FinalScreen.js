@@ -9,6 +9,7 @@ function FinalScreen() {
   const [income, setIncome] = useState(getPoints() - getPointsBeforeChampionship());
 
   const onClickResult = (e) => {
+    
     navigae('/menu');
   }
 

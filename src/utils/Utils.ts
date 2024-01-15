@@ -107,19 +107,6 @@ export function genereateMatches(teams: Team[]) {
 }
 
 
-export function hasPeriod() {
-    let result = localStorage.getItem('period');
-    return result != null && JSON.parse(result).length != 0;
-}
-
-export function getPeriod(): Match[] {
-    let result = localStorage.getItem('period');
-    return result != null ? JSON.parse(result) : [];
-}
-
-export function setPeriod(matches: Match[]) {
-    localStorage.setItem('period', JSON.stringify(matches));
-}
 
 export function getPoints() {
     let result = localStorage.getItem('points');

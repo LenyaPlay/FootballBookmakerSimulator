@@ -61,9 +61,9 @@ function MatchBlue(props) {
         <p className={`${style.gameText} ${style.blue}`}>Jogo {props.number}</p>
         <p className={`${style.betText} ${style.blue}`}>Escolha um vencedor e faça uma aposta</p>
         <div className={style.countries}>
-          <Country active={activeIndex == 0} team={match.team1} betOnClick={betOnClick}></Country>
+          <Country k={match.k1} active={activeIndex == 0} team={match.team1} betOnClick={betOnClick}></Country>
           <div><div className={`${style.divider} ${style.blue}`}></div></div>
-          <Country active={activeIndex == 1} team={match.team2} betOnClick={betOnClick}></Country>
+          <Country k={match.k2} active={activeIndex == 1} team={match.team2} betOnClick={betOnClick}></Country>
         </div>
 
         <input className={style.blueInput} onChange={onChangeInput} value={inputText} placeholder="Insira o valor da aposta..."></input>
@@ -73,7 +73,8 @@ function MatchBlue(props) {
   );
 }
 
-function Country({ team, betOnClick, active }) {
+function Country(props) {
+  const {k, team, betOnClick, active } = props;
   const image_size = window.innerWidth / 3.5;
 
   return (
@@ -90,7 +91,7 @@ function Country({ team, betOnClick, active }) {
         </div>
         <div>
           <p>Vencedor 1</p>
-          <p>Relação {team.k.toFixed(2)}</p>
+          <p>Relação {k.toFixed(2)}</p>
         </div>
       </div>
     </div>);

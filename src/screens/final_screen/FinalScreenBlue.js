@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { getPoints, getPointsBeforeChampionship } from "../../utils/Utils";
 import { useNavigate } from "react-router-dom";
 import style from "./style.module.css"
+import { GameContext } from "src/App";
+import { Stage } from "src/utils/Game";
 
 
 function FinalScreenBlue() {
     const navigate = useNavigate();
     const [income, setIncome] = useState(getPoints() - getPointsBeforeChampionship());
     const prefix = income > 0 ? "+" : "";
+    const gameContext = useContext(GameContext);
 
     const onClickResult = (e) => {
-        navigate('/menu');
+        gameContext.current.setStage(Stage.StartChampionship);
     }
 
 

@@ -1,29 +1,21 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Match from "../../components/match/Match";
 import MatchResult from "../../components/match/MatchResult";
-import { TEAMS, generateForces, generateWinner, genereateMatches, getPeriod, getPoints, hasPeriod, setPeriod, setPoints, setPointsBeforeChampionship } from "../../utils/Utils";
+import { TEAMS, getPoints, setPoints, setPointsBeforeChampionship } from "../../utils/Utils";
 import style from "./style.module.css"
 import MatchBlue from "src/components/match/MatchBlue";
+import { GameContext } from "src/App";
 
 function PeriodScreenBlue(props) {
   const [periodBorderHeight, setPeriodBorderHeight] = useState(-1);
   const navigate = useNavigate();
-
-  const [matches, setMatches] = useState([]);
+  const gameContext = useContext(GameContext);
+  const matches = gameContext.current.matches;
+  
   const [points, _] = useState(getPoints());
 
   useEffect(() => {
-    if(hasPeriod()) {
-      console.log('has');
-      setMatches(getPeriod());
-    } else {
-      let _matches = genereateMatches(TEAMS);
-      setMatches(_matches);
-      setPeriod(_matches);
-      setPointsBeforeChampionship(getPoints());
-    }
-
     setTimeout(() => setPeriodBorderHeight(0), 50);
   }, []);
 
@@ -35,27 +27,6 @@ function PeriodScreenBlue(props) {
       return;
     }
 
-    matches.forEach(match => {
-      generateWinner(match);
-  
-      if (match.bet.id != undefined && match.bet.bet != undefined) {
-        let _money = 0;
-        if (match.winner.id == match.bet.id) {
-          if (match.team1.id == match.winner.id) {
-            _money = match.bet.bet * match.team1.k;
-          } else {
-            _money = match.bet.bet * match.team2.k;
-          }
-          setPoints(getPoints() - match.bet.bet + _money );
-        } else {
-          _money = -match.bet.bet;
-          setPoints(getPoints() - match.bet.bet);
-        }
-        match.money = _money;
-      }
-    })
-
-    setPeriod(matches);
     navigate('/load_result');
   }
 

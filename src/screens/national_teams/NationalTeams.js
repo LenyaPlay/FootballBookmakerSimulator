@@ -2,15 +2,13 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Match from "../../components/match/Match";
 import MatchResult from "../../components/match/MatchResult";
-import { TEAMS, generateForces, genereateMatches, getPeriod, getPoints, hasPeriod, setPeriod } from "../../utils/Utils";
+import { TEAMS } from "../../utils/Utils";
 import style from "./style.module.css"
 import MatchResultBlue from "src/components/match/MatchResultBlue";
 
 function PeriodResultScreenBlue(props) {
     const [periodBorderHeight, setPeriodBorderHeight] = useState(-1);
     const navigate = useNavigate();
-
-    const [matches, setMatches] = useState(getPeriod());
 
     useEffect(() => {
         setTimeout(() => setPeriodBorderHeight(0), 50);
@@ -21,8 +19,6 @@ function PeriodResultScreenBlue(props) {
     }
 
     const pairs = createPairs(TEAMS);
-
-    console.log(pairs);
 
     return (
         <div className={`${style.periodScreen} ${style.blue}`}>

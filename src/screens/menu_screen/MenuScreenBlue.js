@@ -19,7 +19,6 @@ function MenuScreenBlue() {
   const resetPoints = (e) => {
     setRerender(x => x + 1);
     setPoints(10000);
-    setPeriod([]);
   }
 
   const onHelpClick = (e) => {

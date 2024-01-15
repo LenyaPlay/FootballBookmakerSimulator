@@ -4,7 +4,7 @@
 
 .matchContainer.blue {
     width: 100%;
-    padding: 18px 18px 9px 18px;
+    padding : 18px 18px 9px 18px;
     box-sizing: border-box;
 }
 
@@ -33,12 +33,17 @@
     border-radius: 15px;
 }
 
+.countryImageContainer {
+    aspect-ratio: 1;
+}
+
 .countryImage {
     background-color: #fff;
     border: 2px solid #FFC700;
     object-fit: cover;
     filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
     border-radius: 50%;
+    box-sizing: border-box;
 }
 
 .countryImage.blue {
@@ -60,8 +65,8 @@
 .blue .winImage {
     position: absolute;
     top: -35%;
-    left: 25%;
-    width: 50%;
+    left: 30%;
+    width: 40%;
 
     border: none;
     filter: none;
@@ -99,7 +104,7 @@
     z-index: 0;
     width: 90%;
     box-sizing: border-box;
-
+    
     padding: 7px 0px;
 
 
@@ -122,6 +127,7 @@
 .countries {
     width: 100%;
     margin-top: 25px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -145,13 +151,14 @@
 }
 
 .divider {
+
     background-color: #595959;
-    width: 1px;
-    height: 70%;
+    width: 2px;
+    align-self: stretch;
 }
 
 .divider.blue {
-    height: 65%;
+    align-self: stretch;
 }
 
 .gameText {
@@ -185,12 +192,15 @@
 }
 
 .country {
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+
+ 
 
 
 .betButton {
@@ -211,7 +221,6 @@
 
 
 .blueBetButton {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -220,7 +229,7 @@
     background: #fff;
     border: none;
 
-    padding: 10px 5px;
+    padding: 10px 15px 10px 5px;
 
     box-sizing: border-box;
     box-shadow: none;
@@ -285,20 +294,21 @@
 }
 
 
-.blueBetButton .outCircle {
+.blueBetButton .outCircle, .bottoms .outCircle{
     aspect-ratio: 1;
     box-sizing: border-box;
     border: 2px solid #EBF6FF;
     padding: 5px;
     border-radius: 50%;
 
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.blueBetButton .innerCircle {
+
+
+.blueBetButton .innerCircle, .bottoms .innerCircle {
     background-color: #00427E;
     box-sizing: border-box;
     border-radius: 50%;
@@ -431,5 +441,223 @@
 }
 
 .matchResult .moneyText{
-    margin-bottom: -10px;
+    margin-bottom: -35px;
+}
+
+
+.bottoms {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.v3 .innerCircle {
+    background: #EC1D26 !important;
+}
+
+
+.v3 .divider {
+    background-color: #00427E;
+    width: 2px;
+    box-sizing: border-box;
+    margin: 5% 0px 17% 0px;
+}
+
+
+.v3 .winImage {
+    top: -20% !important;
+}
+
+
+
+.v3 .betText {
+    margin: 0px;
+    margin-top: 7px;
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+
+    color: #242E6D;
+}
+
+.v3 .gameText {
+    margin: 0px;
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #242E6D;
+}
+
+.v3Countries, .v3Buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.v3Divider {
+    flex: 1;
+}
+
+
+.v3Divider > div {
+    background-color: #00427E;
+    width: 1px;
+    height: 100%;
+    margin: auto;
+}
+
+.v3Image {
+    aspect-ratio: 1;
+}
+
+.v3Image > img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.v3Countries {
+    margin-top: 24px;
+}
+
+
+.v3Country {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.force {
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #242E6D;
+}
+
+.v3CountryText {
+    margin-top: -25px;
+    z-index: 0;
+    width: 90%;
+    box-sizing: border-box;
+
+    padding: 2px 0px;
+    border-radius: 50px;
+
+
+    background: #00427E;
+    border: 2px solid #FFFFFF;
+
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    /* identical to box height */
+    text-align: center;
+    font-family: 'Century Gothic';
+
+    color: #FFFFFF;
+}
+
+.v3Input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 23px;
+
+    background: #fff;
+    border: none;
+
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 50px;
+}
+
+.v3 .match {
+    transition: top 250ms ease-out;
+    top: 0%;
+    position: relative;
+    opacity: 0;
+
+    padding: 10px 20px 20px 20px;
+}
+
+.v3OutCircle {
+    margin: 0px 5px;
+    box-sizing: border-box;
+    border: 2px solid #EBF6FF;
+    padding: 4px;
+    border-radius: 50%;
+
+
+    width: 30px;
+    width: 30px;
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+
+.v3InnerCircle {
+    height: auto;
+    width: 100%;
+    height: 100%;
+
+    background-color: #EC1D26;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transition: height 150ms ease-out, width 150ms ease-out;
+}
+
+.v3InnerCircle.none{
+    width: 0;
+    height: 0;
+    background-color: #fff;
+}
+
+
+.v3Buttons {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.v3GoalText {
+
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #242E6D;
+}
+
+.v3betButtonText {
+    pointer-events: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
 }

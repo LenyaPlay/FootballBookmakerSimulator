@@ -36,7 +36,7 @@
 
 .bg.blue {
   background-image: linear-gradient(0deg, #00427Ef0, #00427Ef0),
-  url("src/assets/blue_design/bg.png");
+    url("src/assets/blue_design/bg.png");
 }
 
 .bgResult {
@@ -48,7 +48,7 @@
 
 .bgResult.blue {
   background-image: linear-gradient(0deg, #00427Ef0, #00427Ef0),
-  url("src/assets/blue_design/bg.png");
+    url("src/assets/blue_design/bg.png");
 }
 
 
@@ -63,7 +63,6 @@
 }
 
 .progressBar {
-  height: 5px;
   margin: 24px;
   width: 100%;
   box-sizing: border-box;
@@ -75,7 +74,7 @@
   background: #FFF;
 }
 
-.bgResult.blue .progressBar .full{
+.bgResult.blue .progressBar .full {
   background: #00BCFB;
 }
 
@@ -86,14 +85,56 @@
 
 
 .progressBar .full {
-  height: 5px;
+  height: 4px;
   background: #FFC700;
   border-radius: 50px;
   transition: width 250ms ease-out;
 }
 
-.progressBar.blue .full{
+.progressBar.blue .full {
   background: #00BCFB;
 }
 
+.v3 {
+  padding-left: 10px;
+  justify-content: flex-end !important;
+}
 
+.v3 .center {
+  margin-bottom: 90%; 
+}
+
+
+.v3.bg {
+  background-image: url("src/assets/v3/bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.v3 .text {
+  font-family: 'Century Gothic';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #FFFFFF;
+}
+
+.v3 .mainText {
+  font-family: 'Century Gothic';
+  font-style: italic;
+  font-weight: 700;
+
+  color: #FFFFFF;
+}
+
+.v3 .progressBar {
+  background: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+.v3 .progressBar .full {
+  background-color: #EC1D26;
+}
