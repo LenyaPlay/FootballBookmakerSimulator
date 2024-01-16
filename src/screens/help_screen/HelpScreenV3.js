@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setPeriod, setPoints } from "../../utils/Utils";
-import style from "./style.module.css"
+import style from "./style.module.scss"
 
 function HelpScreenV3() {
     const navigate = useNavigate();

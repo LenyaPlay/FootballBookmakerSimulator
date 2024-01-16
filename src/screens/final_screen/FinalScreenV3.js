@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { getPoints, getPointsBeforeChampionship } from "../../utils/Utils";
 import { useNavigate } from "react-router-dom";
-import style from "./style.module.css"
+import style from "./style.module.scss"
 import { GameContext } from "src/App";
 import { Stage } from "src/utils/Game";
 

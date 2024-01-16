@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Match from "../../components/match/Match";
 import MatchResult from "../../components/match/MatchResult";
 import { TEAMS, getPoints} from "../../utils/Utils";
-import style from "./style.module.css"
+import style from "./style.module.scss"
 import LoadResultScreenV3 from "../load_screen/LoadResultScreenV3";
 
 function PeriodResultScreen(props) {

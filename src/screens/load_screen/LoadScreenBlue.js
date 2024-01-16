@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import rootStyle from "src/styles/styles.module.css"
-import style from "./style.module.css"
+import rootStyle from "src/styles/styles.module.scss"
+import style from "./style.module.scss"
 
 function LoadScreenBlue() {
   const [fill, setFill] = useState(0);

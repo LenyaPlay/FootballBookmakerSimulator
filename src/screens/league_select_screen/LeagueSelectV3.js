@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import rootStyle from "src/styles/styles.module.css"
-import style from "./style.module.css"
+import rootStyle from "src/styles/styles.module.scss"
+import style from "./style.module.scss"
 import { useNavigate } from 'react-router-dom'
 import { GameContext } from 'src/App';
 import { Stage } from 'src/utils/Game';

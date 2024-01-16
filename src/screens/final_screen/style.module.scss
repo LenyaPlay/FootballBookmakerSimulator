@@ -1,0 +1,214 @@
+.finalScreen {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 75%;
+    }
+
+    .result {
+        margin-top: 11px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+
+        color: #FFFFFF;
+
+        &.win {
+            background: #5DD200;
+            border: 3px solid #FFFFFF;
+            border-radius: 300px;
+            padding: 5px 54px;
+        }
+
+        &.lose {
+            background: #FF0000;
+            border: 3px solid #FFFFFF;
+            border-radius: 300px;
+            padding: 5px 54px;
+        }
+
+        .text {
+            font-family: 'Futura Book';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .number {
+            margin-top: 5px;
+            font-family: 'FuturicaBs';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.bg {
+    background-image: url("/assets/default_design/bg2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &.blue {
+        background-image: linear-gradient(0deg, #00427Ef0, #00427Ef0),
+            url("/assets/blue_design/bg.png");
+        background-position: 35%;
+    }
+}
+
+.finalText {
+    font-family: 'FuturicaBs';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFC700;
+
+    &.blue {
+        color: #FFF;
+    }
+}
+
+.result {
+    margin-top: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+
+    color: #FFFFFF;
+
+    &.blue {
+        background-color: #FFF;
+        border: 3px solid #FFFFFF;
+        border-radius: 300px;
+        padding: 5px 54px;
+
+        &.win {
+            background: #5DD200;
+        }
+
+        &.lose {
+            background: #FF0000;
+        }
+    }
+
+    .text {
+        font-family: 'Futura Book';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .number {
+        margin-top: 5px;
+        font-family: 'FuturicaBs';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &.win {
+        color: #5DD200;
+    }
+
+    &.lose {
+        color: #FF0000;
+    }
+
+    &.blue {
+        .win {
+            color: #fff;
+            font-family: 'FuturicaBs';
+            font-weight: bold;
+            background-color: #5DD200;
+        }
+
+        .lose {
+            color: #fff;
+            font-family: 'FuturicaBs';
+            font-weight: bold;
+            background-color: #FF0000;
+        }
+    }
+
+    .draw {
+        color: #FFF;
+    }
+}
+
+.v3.bg {
+    background-image: url("/assets/v3/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .finalText {
+        font-family: 'Century Gothic';
+        font-style: italic;
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    .text {
+        font-style: italic;
+    }
+
+    .number {
+        font-style: italic;
+    }
+
+    .result {
+        padding: 5px 30px;
+        background: #444;
+        border: 3px solid #FFFFFF;
+        border-radius: 300px;
+
+        &.lose {
+            background: #EC1D26;
+        }
+
+        &.win {
+            background: #009900;
+        }
+
+        .number {
+            color: #fff;
+        }
+    }
+}

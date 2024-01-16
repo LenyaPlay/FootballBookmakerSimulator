@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import style from "./style.module.css"
-import rootStyle from "src/styles/styles.module.css"
+
+import style from "./style.module.scss"
+import rootStyle from "src/styles/styles.module.scss"
 
 function LoadResultScreenV3(props) {
     const [fill, setFill] = useState(0);

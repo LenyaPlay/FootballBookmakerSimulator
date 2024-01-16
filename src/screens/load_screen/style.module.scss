@@ -1,0 +1,113 @@
+.text {
+  font-family: 'Futura Book';
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.mainText {
+  font-family: 'FuturicaBs';
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFC700;
+  
+  &.blue, .blue & {
+    color: #fff;
+  }
+}
+
+.bg {
+  background-image: url("/assets/default_design/bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  &.blue {
+    background-image: linear-gradient(0deg, #00427Ef0, #00427Ef0), url("/assets/blue_design/bg.png");
+  }
+}
+
+.bgResult {
+  background-image: url("/assets/default_design/bg3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &.blue {
+    background-image: linear-gradient(0deg, #00427Ef0, #00427Ef0), url("/assets/blue_design/bg.png");
+  }
+}
+
+.center {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressBar {
+  margin: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #595959;
+  border-radius: 50px;
+
+  .full {
+    height: 4px;
+    background: #FFC700;
+    border-radius: 50px;
+    transition: width 250ms ease-out;
+
+    &.blue {
+      background: #00BCFB;
+    }
+  }
+}
+
+.v3 {
+  padding-left: 10px;
+  justify-content: flex-end !important;
+
+  &.bg {
+    background-image: url("/assets/v3/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .center {
+    margin-bottom: 90%; 
+  }
+
+  .text {
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+  }
+
+  .mainText {
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+
+  .progressBar {
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+
+    .full {
+      background-color: #EC1D26;
+    }
+  }
+}

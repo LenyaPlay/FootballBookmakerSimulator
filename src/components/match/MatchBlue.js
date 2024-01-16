@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import style from "./style.module.css"
+import style from "./style.module.scss"
 
 function MatchBlue(props) {
   const navigate = useNavigate();

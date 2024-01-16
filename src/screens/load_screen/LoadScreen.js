@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import rootStyle from "src/styles/styles.module.css"
-import style from "./style.module.css"
+import rootStyle from "src/styles/styles.module.scss"
+import style from "./style.module.scss"
 
 
 function LoadScreen() {
@@ -11,7 +11,7 @@ function LoadScreen() {
   useEffect(() => {
     setTimeout(() => setFill(0.5), 300);
     setTimeout(() => setFill(1), 300);
-    setTimeout(() => navigate('/menu'), 750);
+   // setTimeout(() => navigate('/menu'), 750);
   }, []);
 
   return (

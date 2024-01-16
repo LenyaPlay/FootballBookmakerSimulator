@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import style from "./style.module.css"
+import style from "./style.module.scss"
 import { Game } from "src/utils/Game";
 import type { Match } from "src/utils/Game";
 import { TEAMS } from "src/utils/Utils";

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { generateWinner, getPeriod, getPoints, getWinner, setPeriod, setPoints } from "../../utils/Utils";
-import style from "./style.module.css"
+import style from "./style.module.scss"
 
 
 function MatchResultBlue(props) {

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setPeriod, setPoints } from "../../utils/Utils";
-import rootStyle from "src/styles/styles.module.css"
-import style from "./style.module.css"
+import rootStyle from "src/styles/styles.module.scss"
+import style from "./style.module.scss"
 
 function MenuScreenV3() {
   const navigate = useNavigate();
