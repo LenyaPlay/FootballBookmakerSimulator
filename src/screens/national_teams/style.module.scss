@@ -150,5 +150,27 @@
   
   .country {
     display: flex;
-    flex
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    padding: 8px 34px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #EBF6FF;
+  
+    &.blue {
+      background-color: #00427E;
+    }
+  }
+  
+  .countries {
+    width: 100%;
+    margin-top: 17px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
   
