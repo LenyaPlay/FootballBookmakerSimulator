@@ -8,6 +8,10 @@
             user-select: none;
 }
 
+@mixin cursorPointer {
+    cursor: pointer;
+}
+
 .finalScreen {
     background-size: cover;
     width: 100%;
@@ -245,6 +249,7 @@
     }
 
     .result {
+        @include cursorPointer();
         box-sizing: border-box;
         width: 140px;
         height: 140px;
@@ -268,7 +273,6 @@
         }
 
         .number {
-            @include ignorePointer;
             color: #FFF;
             text-align: center;
             font-family: "Century Gothic";
@@ -280,7 +284,6 @@
         }
 
         .text {
-            @include ignorePointer;
             color: #FFF;
             text-align: center;
             font-family: "Century Gothic";
