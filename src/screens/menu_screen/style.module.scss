@@ -24,55 +24,62 @@
     }
 }
 
-.button {
-    color: #fff;
-    padding: 14px 0px;
-    width: 100%;
-    border-width: 0px;
-    margin-top: 22px;
-    font-size: 20px;
-    background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
-    border: 2px solid #FFC700;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
 
-    &:active {
-        background: #3D3D3D;
+.v1 {
+    .button {
+        color: #fff;
+        padding: 14px 0px;
+        width: 100%;
+        border-width: 0px;
+        margin-top: 22px;
+        font-size: 20px;
+        background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
         border: 2px solid #FFC700;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5), inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
         border-radius: 15px;
+    
+        &:active {
+            background: #3D3D3D;
+            border: 2px solid #FFC700;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5), inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+        }
     }
 }
 
-.blueButton {
-    background: #FFFFFF;
-    border-radius: 300px;
-    padding: 14px 0px;
-    width: 100%;
-    border-width: 0px;
-    margin-top: 18px;
-    color: #00427E;
-    font-size: 20px;
-
-    &:active {
-        background: #EBF6FF;
-        box-shadow: inset 0px 0px 10px rgba(5, 33, 89, 0.6);
+.blue {
+    .button {
+        background: #FFFFFF;
+        border-radius: 300px;
+        padding: 14px 0px;
+        width: 100%;
+        border-width: 0px;
+        margin-top: 18px;
+        color: #00427E;
+        font-size: 20px;
+    
+        &:active {
+            background: #EBF6FF;
+            box-shadow: inset 0px 0px 10px rgba(5, 33, 89, 0.6);
+        }
     }
 }
+
+
 
 .v3 {
-    justify-content: flex-end !important;
+    justify-content: flex-end;
 
     &.bg {
         background-image: linear-gradient(0deg, #239BD7cc, #239BD7cc), url("/assets/v3/bg.png");
         background-position: center;
     }
 
-    & .center {
+    .center {
         margin-bottom: 90%;
     }
 
-    & .button {
+    .button {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         background: #FFFFFF;
         border-radius: 300px;
@@ -90,6 +97,40 @@
             background: #FFFFFF;
             box-shadow: inset 0px 0px 10px rgba(36, 46, 109, 0.7);
             border-radius: 300px;
+        }
+    }
+}
+
+.v4 {
+    justify-content: flex-end;
+    background-image: linear-gradient(0deg, #0EB6EBed, #0EB6EBed), url("/assets/v4/bg2.png");
+    background-repeat: no-repeat;
+    background-size: 180%;
+    background-position: center;
+
+    .center {
+        margin-bottom: 90%;
+    }
+
+    .button {
+        background: #FFFFFF;
+        width: 100%;
+        padding: 14px;
+        border: none;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        margin: 9px 0px;
+
+        color: #1226A8;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &:active {
+            background: #FFF;
+            box-shadow: 0px 0px 10px 0px rgba(36, 46, 109, 0.70) inset;
         }
     }
 }

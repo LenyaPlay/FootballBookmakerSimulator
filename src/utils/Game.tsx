@@ -6,6 +6,10 @@ import LeagueSelectV3 from "src/screens/league_select_screen/LeagueSelectV3";
 import FinalScreenBlue from "src/screens/final_screen/FinalScreenBlue";
 import FinalScreenV3 from "src/screens/final_screen/FinalScreenV3";
 import { useNavigate } from "react-router-dom";
+import LeagueSelectV4 from "src/screens/league_select_screen/LeagueSelectV4";
+import PeriodScreenV4 from "src/screens/period_screen/PeriodScreenV4";
+import PeriodResultScreenV4 from "src/screens/period_screen/PeriodResultScreenV4";
+import FinalScreenV4 from "src/screens/final_screen/FinalScreenV4";
 
 interface IPrototype {  __proto__ : any; }
 
@@ -67,13 +71,13 @@ export class Game {
     getScreen() {
         switch (this.stage) {
             case Stage.StartChampionship:
-                return <LeagueSelectV3/>
+                return <LeagueSelectV4/>
             case Stage.StartMatch:
-                return <PeriodScreenV3/>
+                return <PeriodScreenV4/>
             case Stage.FinishMatch:
-                return <PeriodResultScreenV3/>
+                return <PeriodResultScreenV4/>
             case Stage.FinishChampionship:
-                return <FinalScreenV3/>
+                return <FinalScreenV4/>
         }
     }
 

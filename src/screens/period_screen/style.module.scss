@@ -174,3 +174,63 @@
         background-color: #242E6D;
     }
 }
+
+.v4.periodScreen {
+    background: none;
+    background: #C7EEFF;
+
+    .periodBorderContainer {
+        width: 100%;
+
+        .periodBorder {
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 0px 18px;
+            border-radius: 0px;
+            border-width: 0;
+            background: #0EB6EB;
+            box-shadow: none;
+        }
+    }
+
+    .period {
+        color: #FFF;
+        font-family: "Century Gothic";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .point {
+        color: #EBF6FF;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .button {
+        background: #1226A8;
+        border: none;
+        border-radius: 0;
+
+        color: #FFF;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        box-shadow: none;
+
+        &:active, &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.70) inset;
+        }
+    }
+}

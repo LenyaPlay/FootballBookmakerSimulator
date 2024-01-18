@@ -28,10 +28,10 @@ function MenuScreenBlue() {
   return (
     <div className={`${rootStyle.baseContainer} ${style.bg} ${style.blue}`}>
       <div className={`${style.center} ${style.blue}`}>
-        <button className={`${style.blueButton}`} onClick={onPlayClick}>Jogar o Campeonato</button>
-        <button className={`${style.blueButton}`} onClick={onTeamsClick}>Equipes nacionais</button>
-        <button className={`${style.blueButton}`} onClick={resetPoints}>Repor os óculos</button>
-        <button className={`${style.blueButton}`} onClick={onHelpClick}>Um pouco de treino</button>
+        <button className={`${style.button}`} onClick={onPlayClick}>Jogar o Campeonato</button>
+        <button className={`${style.button}`} onClick={onTeamsClick}>Equipes nacionais</button>
+        <button className={`${style.button}`} onClick={resetPoints}>Repor os óculos</button>
+        <button className={`${style.button}`} onClick={onHelpClick}>Um pouco de treino</button>
       </div>
     </div>
   );

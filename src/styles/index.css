@@ -60,7 +60,7 @@ img {
 @font-face {
   font-family: 'Century Gothic';
   font-weight: bold;
-  src:  url(./fonts/centurygothic_bold.ttf);
+  src:  url(./fonts/centurygothic_bold.ttf) ;
 }
 
 html,
@@ -72,9 +72,5 @@ body,
 
 html {
   scrollbar-width: none;
-}
-
-* {
-  font-family: 'Futura Book';
 }
 

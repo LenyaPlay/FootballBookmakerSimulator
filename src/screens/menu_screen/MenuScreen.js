@@ -27,7 +27,7 @@ function MenuScreen() {
   }
 
   return (
-    <div className={`${rootStyle.baseContainer} ${style.bg}`}>
+    <div className={`${rootStyle.baseContainer} ${style.v1} ${style.bg}`}>
       <div className={`${style.center}`}>
         <button className={style.button} onClick={onPlayClick}>Jogar o Campeonato</button>
         <button className={style.button} onClick={onTeamsClick}>Equipes nacionais</button>

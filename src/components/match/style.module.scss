@@ -1,6 +1,23 @@
+@mixin ignorePointer {
+    pointer-events: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+@mixin selectPointer {
+    cursor: pointer;
+}
+
+
 .matchContainer {
     width: 100%;
 }
+
+
 
 .matchContainer.blue {
     width: 100%;
@@ -323,7 +340,7 @@
 }
 
 
-.betButton p {
+.betButton .buttonText {
     font-family: 'Futura Book';
     font-style: normal;
     font-weight: 200;
@@ -660,4 +677,204 @@
        -moz-user-select: none; /* Old versions of Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
+}
+
+.v4 {
+    &.matchContainer{
+        width: 100%;
+        padding : 18px 18px 9px 18px;
+        box-sizing: border-box;
+    }
+
+    .match {
+        background: rgba(255, 255, 255, 0.70);
+        border-radius: 0px;
+        padding: 8px 23px 0px 23px;
+    }
+    
+    .gameText {
+        @include ignorePointer;
+        color: #1226A8;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .countryText{
+        @include ignorePointer;
+        margin: 0;
+        margin-bottom: 13px;
+
+        color: #FFF;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        border: 1.5px solid #FFF;
+        border-radius: 0;
+        background: #1226A8;
+
+        box-shadow: none;
+    }
+
+    .goalText {
+        color: #1226A8;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .betText {
+        @include ignorePointer;
+        color: #1226A8;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .countryImage {
+        aspect-ratio: 80/60;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        filter: none;
+    }
+
+    .countryText, .countryImage {
+        width: 70%;
+    }
+
+    .textImageContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .winImage {
+        width: 45px;
+        left: calc(50% - 45px/2);
+        top: -30px;
+
+        border-radius: 0;
+        border: none;
+        filter: none;
+    }
+
+    .divider {
+        flex: 1;
+        background-color: transparent;
+        div {
+            background-color: #00427E88;
+            width: 1px;
+            height: 100%;
+            margin: auto;
+        }
+    }
+
+    .moneyText {
+        color: #FFF;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        
+        margin: 0;
+        border-radius: 0;
+        padding: 4px 9px;
+        height: 33px;
+        background: #838383;
+        box-shadow: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.win {
+            background: #090;
+        }
+
+        &.lose {
+            background: #AB0007;
+        }
+    }
+    
+    .input {
+        background: #FFF;
+        box-shadow: none;
+        border-radius: 0;
+        margin-bottom: 23px;
+
+        color: rgba(18, 38, 168, 0.50);
+        font-family: "Century Gothic";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .force {
+        @include ignorePointer;
+        color: #1226A8;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .betButton {
+        width: 40%;
+        border: none;
+        border-radius: 0;
+        background: #FFF;
+        box-shadow: none;
+        padding: 11px 5px;
+        @include selectPointer;
+
+        .outCircle {
+
+            box-shadow: none;
+            filter: none;
+            border: solid 2px #EBF6FF;
+
+            .innerCircle {
+                background: #AB0007;
+                filter: none;
+                box-shadow: none;
+            }
+        }
+
+
+        .buttonText {
+            color: #1226A8;
+            font-family: "Century Gothic";
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
 }

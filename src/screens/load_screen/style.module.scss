@@ -111,3 +111,48 @@
     }
   }
 }
+
+.v4 {
+  padding-left: 10px;
+  justify-content: flex-end !important;
+  background-image: url("/assets/v4/bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .center {
+    margin-bottom: 90%; 
+  }
+
+  .text1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Century Gothic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .mainText {
+    color: #FFF;
+    text-align: center;
+    font-family: "Century Gothic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+  }
+
+  .progressBar {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 0px;
+
+    .full {
+      background-color: #AB0007;
+    }
+  }
+}

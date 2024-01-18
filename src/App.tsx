@@ -8,6 +8,9 @@ import MenuScreen from './screens/menu_screen/MenuScreen';
 import MenuScreenV3 from './screens/menu_screen/MenuScreenV3';
 import HelpScreenBlue from './screens/help_screen/HelpScreenBlue';
 import HelpScreenV3 from './screens/help_screen/HelpScreenV3';
+import MenuScreenBlue from './screens/menu_screen/MenuScreenBlue';
+import MenuScreenV4 from './screens/menu_screen/MenuScreenV4';
+import LoadScreenV4 from './screens/load_screen/LoadScreenV4';
 
 // localStorage.clear();
 
@@ -40,8 +43,8 @@ function App() {
   return <GameContext.Provider value={GameContextDefaultValue}>
     <HashRouter>
         <Routes>
-            <Route path="/" element={<LoadScreenV3 />} />
-            <Route path="menu" element={<MenuScreenV3 />} />
+            <Route path="/" element={<LoadScreenV4 />} />
+            <Route path="menu" element={<MenuScreenV4 />} />
             <Route path="help" element={<HelpScreenV3/>}/>
             <Route path="game" element={<GameV3/>}/> 
         </Routes>
