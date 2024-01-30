@@ -1,3 +1,17 @@
+@mixin ignorePointer {
+    pointer-events: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+@mixin selectPointer {
+    cursor: pointer;
+}
+
 .periodScreen {
     background: linear-gradient(#3F3F3F, #000000);
     width: 100%;
@@ -229,8 +243,124 @@
 
         box-shadow: none;
 
-        &:active, &:hover {
+        &:active,
+        &:hover {
             box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.70) inset;
+        }
+    }
+}
+
+
+.v5 {
+    background: #283876;
+    min-height: 100vh;
+
+    .header {
+        &.bg4 {
+            background-image: url("/assets/v5/bg4.png");
+        }
+        &.bg5 {
+            background-image: url("/assets/v5/bg5.png");
+        }
+
+        background-image: url("/assets/v5/bg3.png");
+        width: 100%;
+        background-size: cover;
+        padding: 76px 22px 22px 22px;
+        box-sizing: border-box;
+
+        .text1 {
+            color: #FFF;
+            font-family: "DIN Pro";
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        .text2 {
+            color: #FFE600;
+            font-family: "DIN Pro";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+
+
+    .periodBorderContainer {
+        width: 100%;
+        height: auto;
+
+        .periodBorder {
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 5px;
+            padding: 18px 18px;
+            border-radius: 0px;
+            border-width: 0;
+            background: #000C4F;
+            box-shadow: none;
+
+            .period {
+                color: #FFF;
+                font-family: "DIN Pro";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+
+            .points {
+                color: #FFF;
+                text-align: right;
+                font-family: "DIN Pro";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: uppercase;
+                display: flex;
+                position: relative;
+            }
+
+
+            .points::before{
+                content: url("/assets/v5/coin.png");      
+                display: flex;
+                align-items: center;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .button {
+        @include selectPointer();
+        background: #FFF;
+        border: none;
+        border-radius: 0;
+        padding: 17px 29px;
+
+        color: #283876;
+        text-align: center;
+        font-family: "DIN Pro";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+
+        box-shadow: none;
+
+        &:active,
+        &:hover {
+            background: #FFF;
+            box-shadow: 0px 0px 8px 1px #283876 inset;
         }
     }
 }

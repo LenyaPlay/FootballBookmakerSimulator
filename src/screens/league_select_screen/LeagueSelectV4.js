@@ -3,7 +3,8 @@ import rootStyle from "src/styles/styles.module.scss"
 import style from "./style.module.scss"
 import { useNavigate } from 'react-router-dom'
 import { GameContext } from 'src/App';
-import { Stage } from 'src/utils/Game';
+import { Stage } from "src/utils/GameTypes";
+
 
 export default function LeagueSelectV4() {
     const navigate = useNavigate();

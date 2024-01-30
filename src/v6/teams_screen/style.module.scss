@@ -1,0 +1,67 @@
+.teamScreen {
+    background-color: #DDD;
+    min-height: 100%;
+
+    .header {
+        background-image: url("/assets/v6/bg/bg14.png");
+        background-size: cover;
+        background-position: center;
+        padding-left: 30px;
+
+        h1 {
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: left;
+        }
+        span {
+            margin-bottom: 12px;
+        }
+    }
+
+
+    .teams {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .team {
+            margin-top: 12px;
+            background-color: #fff;
+            width: 40%;
+            box-sizing: border-box;
+            padding: 10px 10px 20px 10px;
+
+            span {
+                color: #000;
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: none;
+            }
+
+
+            .imageContainer {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    position: absolute;
+                    opacity: 0.1;
+                    background: lightgray -3.5px -2px / 106.731% 105.714% no-repeat;;
+                    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05) inset;
+                }
+            }
+        }
+    }
+
+    button {
+        margin: 42px 13px;
+    }
+
+}

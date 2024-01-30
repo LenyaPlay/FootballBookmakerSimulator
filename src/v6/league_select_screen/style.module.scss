@@ -1,0 +1,33 @@
+.leagueSelect {
+    background-image: url("/assets/v6/bg/bg12.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 36px;
+
+    
+    .div1 {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        margin-left: 31px;
+        margin-top: 78px;
+        cursor: pointer;
+        transition: opacity 250ms ease-out;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+}

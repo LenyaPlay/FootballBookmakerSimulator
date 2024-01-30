@@ -1,0 +1,63 @@
+.finalScreen {
+    background-image: url("/assets/v6/bg/bg16.png");
+
+    &.win {
+        background-image: url("/assets/v6/bg/bg17.png");
+        
+        .circle {
+            background-color: #00CE3C;
+        }
+    }
+    
+    &.lose {
+        
+        .circle {
+            background-color: #CB0000;
+        }
+    }
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    h1 {
+        margin-top: 20vh;
+    }
+
+    .circle {
+        height: 65vh;
+        min-width: 120%;
+        position: absolute;
+        transform: translateY(55%);
+        bottom: 0;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: gray;
+        cursor: pointer;
+        transition: all 250ms ease-out;
+
+        &:hover {
+  
+            background-color: rgb(105, 105, 105);
+        }
+
+        p {
+            margin-top: 51px;
+            color: #FFF;
+            text-align: center;
+            font-family: "Bebas Neue";
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+}

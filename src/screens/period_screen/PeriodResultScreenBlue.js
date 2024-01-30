@@ -6,7 +6,7 @@ import { TEAMS, genereateMatches, getPoints} from "../../utils/Utils";
 import style from "./style.module.scss"
 import MatchResultBlue from "src/components/match/MatchResultBlue";
 import { GameContext } from "src/App";
-import { Stage } from "src/utils/Game";
+
 
 function PeriodResultScreenBlue(props) {
     const [periodBorderHeight, setPeriodBorderHeight] = useState(-1);

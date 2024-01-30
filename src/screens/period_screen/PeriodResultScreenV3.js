@@ -6,7 +6,6 @@ import { TEAMS, genereateMatches, getPoints} from "../../utils/Utils";
 import style from "./style.module.scss"
 import MatchResultBlue from "src/components/match/MatchResultBlue";
 import { GameContext } from "src/App";
-import { Stage } from "src/utils/Game";
 import MatchResultV3 from "src/components/match/MatchResultV3";
 import LoadResultScreenV3 from "../load_screen/LoadResultScreenV3";
 

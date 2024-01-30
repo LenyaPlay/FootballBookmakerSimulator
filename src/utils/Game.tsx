@@ -1,52 +1,14 @@
 import PeriodScreenV3 from "src/screens/period_screen/PeriodScreenV3";
-import { TEAMS, getPoints, setPoints } from "./Utils";
-import PeriodResultScreenV3 from "src/screens/period_screen/PeriodResultScreenV3";
-import FinalScreen from "src/screens/final_screen/FinalScreen";
-import LeagueSelectV3 from "src/screens/league_select_screen/LeagueSelectV3";
-import FinalScreenBlue from "src/screens/final_screen/FinalScreenBlue";
-import FinalScreenV3 from "src/screens/final_screen/FinalScreenV3";
-import { useNavigate } from "react-router-dom";
-import LeagueSelectV4 from "src/screens/league_select_screen/LeagueSelectV4";
-import PeriodScreenV4 from "src/screens/period_screen/PeriodScreenV4";
-import PeriodResultScreenV4 from "src/screens/period_screen/PeriodResultScreenV4";
-import FinalScreenV4 from "src/screens/final_screen/FinalScreenV4";
+import {  TEAMS2, getPoints, setPoints } from "./Utils";
+import PeriodResultScreenV5 from "src/screens/period_screen/PeriodResultScreenV5";
+import FinalScreenV5 from "src/screens/final_screen/FinalScreenV5";
+import { LeagueSelectScreenV6 } from "src/v6/league_select_screen/LeagueSelectScreenV6";
+import { PeriodScreenV6 } from "src/v6/period_screen/PeriodScreenV6";
+import { IPrototype, Match, Stage, Team, bet } from "./GameTypes";
 
-interface IPrototype {  __proto__ : any; }
-
-type Team = {
-    id: number,
-    name: string,
-    image: string,
-    force?: number,
-}
-
-type Match = {
-    team1: Team,
-    team2: Team,
-    bet?: bet,
-    winnerId?: number,
-    money?: number,
-    k1?: number,
-    k2?: number,
-    goals1?: number,
-    goals2?: number,
-}
-
-type bet = {
-    teamId: number | undefined,
-    sum: number | undefined
-}
-
-
-export enum Stage {
-    StartChampionship = "StartChampionship",
-    StartMatch = "StartMatch",
-    FinishMatch = "FinishMatch",
-    FinishChampionship = "FinishChampionship",
-}
 
 export class Game {
-    teams: Team[] = TEAMS.map(e => e);
+    teams: Team[] = TEAMS2.map(e => e);
     name: string = "";
     matches: Match[] = [];
     stage = Stage.StartChampionship;
@@ -71,13 +33,13 @@ export class Game {
     getScreen() {
         switch (this.stage) {
             case Stage.StartChampionship:
-                return <LeagueSelectV4/>
+                return <LeagueSelectScreenV6/>
             case Stage.StartMatch:
-                return <PeriodScreenV4/>
+                return <PeriodScreenV6/>
             case Stage.FinishMatch:
-                return <PeriodResultScreenV4/>
+                return <PeriodResultScreenV5/>
             case Stage.FinishChampionship:
-                return <FinalScreenV4/>
+                return <FinalScreenV5/>
         }
     }
 
@@ -85,9 +47,10 @@ export class Game {
         this.stage = stage;
         switch (stage) {
             case Stage.StartChampionship:
-                this.teams = TEAMS.map(e => e);
+                this.teams = TEAMS2.map(e => e);
                 this.matches = [];
                 this.income = 0;
+                this.render();
                 break;
             case Stage.StartMatch:
                 this.removeLosers();

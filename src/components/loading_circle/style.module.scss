@@ -1,0 +1,38 @@
+.loading_circle {
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+        position: absolute;
+        height: 8.28px;
+        width: 100%;
+        transform: rotate(45deg);
+        animation: opacity 2s infinite ease-in-out;
+        opacity: 0.2;
+
+        & > div {
+            height: 100%;
+            aspect-ratio: 1;
+            background-color: #0002;
+            border-radius: 50%;
+        }
+    }
+
+    @keyframes opacity {
+        0% {
+            opacity: 0.2;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.2;
+        }
+    }
+}

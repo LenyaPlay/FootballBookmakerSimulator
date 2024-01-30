@@ -1,0 +1,323 @@
+.periodScreen {
+    min-height: 100%;
+    background: #DDD;
+    display: flex;
+    flex-direction: column;
+
+
+    .header {
+        background-size: cover;
+        background-position: center;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        &.football {
+            background-image: url("/assets/v6/bg/bg15.png");
+        }
+    
+        &.basketball {
+            background-image: url("/assets/v6/bg/bg18.png");
+        }
+    
+        &.hockey {
+            background-image: url("/assets/v6/bg/bg20.png");
+        }
+    
+        &.volleyball {
+            background-image: url("/assets/v6/bg/bg19.png");
+        }
+    
+        .balance {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    
+
+    .info {
+        margin: auto 0;
+        h1 {
+            text-align: left;
+        }
+        h2 {
+            color: #FFD600;
+            font-family: "Bebas Neue";
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+
+    button {
+        width: 100%;
+        margin: 66px 0px;
+    }
+
+
+    .content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0px 12px 6px 12px;
+    }
+
+    .match {
+        background-color: #FFF;
+        margin-top: 12px;
+        padding-bottom: 12px;
+
+        &.result {
+            padding-bottom: 0px;
+            position: relative;
+            .money {
+                position: absolute;
+                bottom: 0;
+                transform: translateY(25%);                
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                
+                p {
+
+                    &.win {
+                        background: #00CE3C;
+                    }
+                    &.lose {
+                        background: #CB0000;
+                    }
+                    width: 25%;
+                    color: #FFF;
+                    background-color: #717171;
+                    padding: 3px 0px;
+                    text-align: center;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .textGoals {
+            color: #006835;
+            text-align: center;
+            font-family: "Bebas Neue";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        .text1 {
+            background: #F8F8F8;
+            padding: 10px 0px;
+            color: #717171;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        .teams {
+            display: flex;
+            padding: 4px 12px 10px 12px;
+            .teamLeft {
+                &.winner {
+                    position: relative;
+                }
+            
+                &.winner::after {
+                    position: absolute;
+                    content: '';
+                    background-image: url("/assets/v6/icons/icon2.png");
+                    aspect-ratio: 38/50;
+                    height: 50px;
+                    top: 0%;
+                    left: -20px;
+                    transform: translateY(35%);
+            
+                }
+
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                .text2 {
+                    margin: 4px 0px;
+                    color: #000;
+                    font-family: Roboto;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                .selector {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    
+                    div {
+                        display: flex;
+                        width: 60%;
+                        aspect-ratio: 16/9;
+                    }
+                }
+
+                .params {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    margin-top: 12px;
+        
+                    span {
+                        color: #717171;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-transform: none;
+                    }
+                }
+            }
+
+            .teamRight {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                &.winner {
+                    position: relative;
+                }
+            
+                &.winner::after {
+                    position: absolute;
+                    content: '';
+                    background-image: url("/assets/v6/icons/icon2.png");
+                    aspect-ratio: 38/50;
+                    height: 50px;
+                    top: 0%;
+                    right: -20px;
+                    transform: translateY(35%);
+            
+                }
+
+                .text2 {
+                    margin: 4px 0px;
+                    color: #000;
+                    font-family: Roboto;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-align: right;
+                }
+
+                .selector {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 16px;
+
+                    div {
+                        display: flex;    
+                        justify-content: end;        
+                        width: 60%;            
+                        aspect-ratio: 16/9;
+                    }
+                }
+
+                .params {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    margin-top: 12px;
+        
+                    span {
+                        color: #717171;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-transform: none;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        
+        
+        .inputContainer {
+            margin-bottom: 23px;
+            width: 100%;
+            margin: 0;
+            margin-top: 20px;
+            padding: 0;
+            background: #F8F8F8;
+            display: flex;
+            align-items: center;
+            transition: all 75ms ease-out;
+            
+            &::before {
+                content: "";
+                background-image: url("/assets/v6/icons/icon1.png");
+                background-size: 100% 100%;
+                width: 19px;
+                height: 19px;
+                margin: 0px 5px 0px 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &:hover {
+                box-shadow: 0px 0px 2px 0px rgba(68, 68, 68, 1) inset;
+                background: #e0e0e0;
+            }
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            
+            background: transparent;
+            border: none;
+            padding: 11px 0 11px 8px;
+            transition: all 75ms ease-out;
+            outline: none;
+            
+            color: #000;
+            font-family: Roboto;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            &:focus {    
+                box-shadow: 0px 0px 2px 0px rgba(68, 68, 68, 1) inset;
+                background: #F8F8F8;
+            }
+
+            &:hover {
+                box-shadow: 0px 0px 2px 0px rgba(68, 68, 68, 1) inset;
+                background: #e0e0e0;
+            }
+        }
+        
+    }
+}

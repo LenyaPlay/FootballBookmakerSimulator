@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#3F3F3F, #000000);
 }
 
 code {
@@ -61,6 +60,39 @@ img {
   font-family: 'Century Gothic';
   font-weight: bold;
   src:  url(./fonts/centurygothic_bold.ttf) ;
+}
+
+@font-face {
+  font-family: 'Din pro';
+  font-weight: 400;
+  src:  url(./fonts/DINPRO/dinpro_black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Din pro';
+  font-weight: 100200;
+  src:  url(./fonts/DINPRO/dinpro_light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Din pro';
+  font-weight: bold;
+  src:  url(./fonts/DINPRO/dinpro_bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Din pro';
+  font-weight: 400;
+  font-style: italic;
+  src:  url(./fonts/DINPRO/dinpro_blackitalic.otf) format("opentype");
+}
+
+
+@font-face {
+  font-family: 'Din pro';
+  font-weight: bold;
+  font-style: italic;
+  src:  url(./fonts/DINPRO/dinpro_bolditalic.otf) format("opentype");
 }
 
 html,

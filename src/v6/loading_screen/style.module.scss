@@ -1,0 +1,32 @@
+.loadingScreen {
+    background-image: url("/assets/v6/bg/bg11.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+    &.football {
+        background-image: url("/assets/v6/bg/bg21.png");
+    }
+
+    &.basketball {
+        background-image: url("/assets/v6/bg/bg22.png");
+    }
+
+    &.hockey {
+        background-image: url("/assets/v6/bg/bg11.png");
+    }
+
+    &.volleyball {
+        background-image: url("/assets/v6/bg/bg23.png");
+    }
+
+    .loader {
+        width: 2rem;
+    }
+}

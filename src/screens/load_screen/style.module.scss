@@ -156,3 +156,76 @@
     }
   }
 }
+
+
+.v5 {
+  min-height: 100vh;
+  padding-left: 10px;
+  justify-content: flex-end !important;
+  background-image: url("/assets/v5/bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .center {
+    margin-bottom: 90%; 
+  }
+
+  .text1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "DIN Pro";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .text2 {
+    color: #FFF;
+  text-align: center;
+  font-family: "DIN Pro";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+    }
+
+
+  .mainText {
+    color: #FFF;
+    text-align: center;
+    font-family: "DIN Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .progressBar {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 0px;
+
+    .full {
+      background-color: #AB0007;
+    }
+  }
+
+  .loadingCircles {
+    display: flex;
+    gap: 10px;
+  }
+
+  .loadingCircle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: opacity 100ms ease-out;
+  }
+
+}

@@ -1,30 +1,7 @@
+import Match from 'src/components/match/Match';
 import { ReportHandler } from 'web-vitals';
+import { Team } from './GameTypes';
 
-
-type Team = {
-    id: number,
-    name: string,
-    image: string,
-    force: number,
-    k? : number,
-}
-
-type Match = {
-    team1: Team,
-    team2: Team,
-    bet: bet,
-    winner?: Team,
-    money?: number,
-}
-
-type bet = {
-    id: number | undefined,
-    bet: number | undefined
-}
-
-function getEmptyBet(): bet {
-    return { id: undefined, bet: undefined };
-}
 
 export const TEAMS: Team[] = [
     { id: 0, name: 'Argentina', image: require('src/assets/flags/Argentina.png'), force: 0 },
@@ -45,75 +22,62 @@ export const TEAMS: Team[] = [
     { id: 15, name: 'Alemanha', image: require('src/assets/flags/Germany.png'), force: 0 },
 ];
 
-function generateForces(teams: Team[]) {
-    let points = 50;
-    teams.forEach(team => {
-        team.force = points + ~~(Math.random() * 30);
-    })
-}
+export const TEAMS2: Team[] = [
+    { id: 0, name: 'Porto\nAlegre', image: require('src/assets/teams2/1.png'), force: 0 },
+    { id: 1, name: 'São\nPaulo', image: require('src/assets/teams2/2.png'), force: 0 },
+    { id: 2, name: 'Belo\nHorizonte', image: require('src/assets/teams2/3.png'), force: 0 },
+    { id: 3, name: 'Rio de\nJaneiro', image: require('src/assets/teams2/4.png'), force: 0 },
 
-export function generateWinner(match: Match) {
-    const R = Math.random();
-    const P1 = 0.15 + 0.3 * (match.team1.force - match.team2.force);
-    const P2 = 0.15 + 0.3 * (match.team2.force - match.team1.force);
-    if (R < P1) {
-        match.winner = match.team1;
-    }
-    else if (R < P1 + P2) {
-        match.winner = match.team2;
-    }
-    else {
-        match.winner = Math.random() > 0.5 ? match.team1 : match.winner = match.team2;
-    }
-}
+    { id: 4, name: 'Rio de\nJaneiro', image: require('src/assets/teams2/5.png'), force: 0 },
+    { id: 5, name: 'Bragança\nPaulista', image: require('src/assets/teams2/6.png'), force: 0 },
+    { id: 6, name: 'Rio de\nJaneiro', image: require('src/assets/teams2/7.png'), force: 0 },
+    { id: 7, name: 'Curitiba', image: require('src/assets/teams2/8.png'), force: 0 },
 
-function genereateCoefficients(team1: Team, team2: Team) {
-    let k1 = 1.25 + (1.45 - 1.25) * Math.random();
-    let k2 = 1.6 + (1.8 - 1.6) * Math.random();
+    { id: 8, name: 'Porto\nAlegre', image: require('src/assets/teams2/9.png'), force: 0 },
+    { id: 9, name: 'Fortaleza', image: require('src/assets/teams2/10.png'), force: 0 },
+    { id: 10, name: 'São\nPaulo', image: require('src/assets/teams2/11.png'), force: 0 },
+    { id: 11, name: 'São\nPaulo', image: require('src/assets/teams2/12.png'), force: 0 },
 
-    if(team1.force < team2.force) {
-        [k1, k2] = [k2, k1];
-    } 
+    { id: 12, name: 'Belo\nHorizonte', image: require('src/assets/teams2/13.png'), force: 0 },
+    { id: 13, name: 'Rio de\nJaneiro', image: require('src/assets/teams2/14.png'), force: 0 },
+    { id: 14, name: 'Salvador', image: require('src/assets/teams2/15.png'), force: 0 },
+    { id: 15, name: 'Santos', image: require('src/assets/teams2/16.png'), force: 0 },
+];
 
-    team1.k = k1;
-    team2.k = k2;
-}
 
-export function genereateMatches(teams: Team[]) {
-    if (teams.length % 2 == 1) {
-        console.log('teams count is odd');
-        return [];
-    }
+export const TEAMS3: Team[] = [
+    { id: 0, name: 'Новосибирск', image: require('src/assets/v6/flags/1.jpg'), force: 0 },
+    { id: 1, name: 'Самара', image: require('src/assets/v6/flags/2.png'), force: 0 },
+    { id: 2, name: 'Казань', image: require('src/assets/v6/flags/3.png'), force: 0 },
+    { id: 3, name: 'Санкт-Петербург', image: require('src/assets/v6/flags/4.png'), force: 0 },
 
-    generateForces(teams);
-    let selection = teams.map(x => x);
+    { id: 4, name: 'Нижний Новгород', image: require('src/assets/v6/flags/5.png'), force: 0 },
+    { id: 5, name: 'Пермь', image: require('src/assets/v6/flags/6.png'), force: 0 },
+    { id: 6, name: 'Волгоград', image: require('src/assets/v6/flags/7.png'), force: 0 },
+    { id: 7, name: 'Омск', image: require('src/assets/v6/flags/8.png'), force: 0 },
 
-    let matches: Match[] = [];
+    { id: 8, name: 'Воронеж', image: require('src/assets/v6/flags/9.png'), force: 0 },
+    { id: 9, name: 'Челябинск', image: require('src/assets/v6/flags/10.png'), force: 0 },
+    { id: 10, name: 'Уфа', image: require('src/assets/v6/flags/11.png'), force: 0 },
+    { id: 11, name: 'Москва', image: require('src/assets/v6/flags/12.jpg'), force: 0 },
 
-    for (let i = 0; i < teams.length / 2; i++) {
-        let i1 = ~~(Math.random() * selection.length);
-        const t1 = selection[i1];
-        selection.splice(i1, 1);
+    { id: 12, name: 'Екатеринбург', image: require('src/assets/v6/flags/13.png'), force: 0 },
+    { id: 13, name: 'Красноярск', image: require('src/assets/v6/flags/14.png'), force: 0 },
+    { id: 14, name: 'Ростов-на-Дону', image: require('src/assets/v6/flags/15.jpg'), force: 0 },
+    { id: 15, name: 'Краснодар', image: require('src/assets/v6/flags/16.png'), force: 0 },
+];
 
-        let i2 = ~~(Math.random() * selection.length);
-        const t2 = selection[i2];
-        selection.splice(i2, 1);
-
-        genereateCoefficients(t1, t2);
-
-        matches.push({ team1: t1, team2: t2, bet: getEmptyBet() });
-    }
-    return matches;
-}
 
 
 
 export function getPoints() {
     let result = localStorage.getItem('points');
+
     if (result == null || isNaN(parseFloat(result))) {
-        localStorage.setItem('points', '0');
+        localStorage.setItem('points', '');
         return 0;
     }
+
     return parseFloat(result);
 }
 
@@ -134,13 +98,13 @@ export function getPointsBeforeChampionship() {
 
 export const reportWebVitals = (onPerfEntry: ReportHandler) => {
     if (onPerfEntry && onPerfEntry instanceof Function) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(onPerfEntry);
-        getFID(onPerfEntry);
-        getFCP(onPerfEntry);
-        getLCP(onPerfEntry);
-        getTTFB(onPerfEntry);
-      });
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+            getCLS(onPerfEntry);
+            getFID(onPerfEntry);
+            getFCP(onPerfEntry);
+            getLCP(onPerfEntry);
+            getTTFB(onPerfEntry);
+        });
     }
-  };
-  
+};
+

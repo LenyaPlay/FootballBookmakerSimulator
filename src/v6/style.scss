@@ -1,0 +1,43 @@
+h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+span {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+p {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    span {
+        display: inline-block;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        line-height: 16px;
+        font-weight: 400;
+        margin: 6px 0;
+        
+        text-transform: none;
+    }
+    
+}

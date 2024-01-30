@@ -1,25 +1,39 @@
+@mixin ignorePointer {
+  pointer-events: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
+}
+
+@mixin selectPointer {
+  cursor: pointer;
+}
+
 .periodScreen {
-    background: linear-gradient(#3F3F3F, #000000);
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    &.blue {
+  background: linear-gradient(#3F3F3F, #000000);
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.blue {
       background: #fff;
-    }
   }
-  
-  .periodBorderContainer {
-    width: 60%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  
-    .periodBorder {
+}
+
+.periodBorderContainer {
+  width: 60%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .periodBorder {
       transition: top 300ms ease-out;
       top: 0%;
       position: relative;
@@ -35,25 +49,25 @@
       border-top: 0px;
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5), inset 0px 0px 15px rgba(0, 0, 0, 0.5);
       border-radius: 0px 0px 15px 15px;
-  
+
       &.blue {
-        background: #00427E;
-        border-radius: 0px 0px 15px 15px;
+          background: #00427E;
+          border-radius: 0px 0px 15px 15px;
       }
-    }
   }
-  
-  .bluePeriodBorderContainer {
-    padding: 0px 18px;
-    width: 100%;
-    height: 110px;
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  
-    .bluePeriodBorder {
+}
+
+.bluePeriodBorderContainer {
+  padding: 0px 18px;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .bluePeriodBorder {
       transition: top 300ms ease-out;
       top: 0%;
       position: relative;
@@ -64,113 +78,310 @@
       justify-content: center;
       background: #00427E;
       border-radius: 0px 0px 15px 15px;
-    }
   }
-  
-  .text {
-    font-family: 'FuturicaBs';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFC700;
-  
-    &.blue {
+}
+
+.period {
+  font-family: 'FuturicaBs';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFC700;
+
+  &.blue {
       color: #FFF;
       font-size: 30px;
-    }
   }
-  
-  .button {
-    color: #fff;
-    padding: 14px 0px;
-    width: 70%;
-    border-width: 0px;
-    margin-top: 18px;
-    font-size: 20px;
-    background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
-    border: 2px solid #FFC700;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-  
-    &:active {
+}
+
+.points {
+  font-family: 'Futura Book';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #FFFFFF;
+
+  &.blue {
+      font-weight: 500;
+      font-size: 18px;
+  }
+}
+
+.button {
+  color: #fff;
+  padding: 14px 0px;
+  width: 70%;
+  border-width: 0px;
+  margin-top: 18px;
+  font-size: 20px;
+  background: linear-gradient(168.55deg, #3F3F3F 0%, #000000 100%);
+  border: 2px solid #FFC700;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+
+  &:active {
       background: #3D3D3D;
       border: 2px solid #FFC700;
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5), inset 0px 0px 15px rgba(0, 0, 0, 0.5);
       border-radius: 15px;
-    }
   }
-  
-  .blueButton {
-    width: 70%;
-    padding: 14px 13px;
-    box-sizing: border-box;
-    background: #00427E;
-    border-radius: 300px;
-    border: none;
-    color: #fff;
-    font-size: 1.3em;
-    transition: background-color 150ms ease-out;
-  
-    &:active {
+}
+
+.blueButton {
+  padding: 14px 13px;
+  background: #00427E;
+  border-radius: 300px;
+  border: none;
+  color: #fff;
+  font-size: 1.3em;
+  transition: background-color 150ms ease-out;
+
+  &:active {
       background: #2b70b1;
-    }
   }
-  
-  .countryImage {
-    background-color: #fff;
-    border: 2px solid #FFC700;
-    object-fit: cover;
-    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
-    border-radius: 50%;
-    width: 25vw;
-    aspect-ratio: 1;
-  
-    &.blue {
+}
+
+.v3.periodScreen {
+  background: none;
+  background-color: #BFE0FF;
+
+  .periodBorderContainer {
+      width: 100%;
+
+      .periodBorder {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0px 18px;
+          border-radius: 0px;
+          border-width: 0;
+          background-image: linear-gradient(0deg, #239BD7cc, #239BD7cc), url("/assets/v3/bg.png");
+          background-size: cover;
+          box-shadow: none;
+      }
+  }
+
+  .period {
+      font-family: 'Century Gothic';
+      font-style: italic;
+      font-weight: 700;
+      font-size: 30px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+  }
+
+  .point {
+      font-family: 'Century Gothic';
+      font-style: italic;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+      color: #EBF6FF;
+  }
+
+  .blueButton {
+      font-style: italic;
+      background-color: #242E6D;
+  }
+}
+
+.v4.periodScreen {
+  background: none;
+  background: #C7EEFF;
+
+  .periodBorderContainer {
+      width: 100%;
+
+      .periodBorder {
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          padding: 0px 18px;
+          border-radius: 0px;
+          border-width: 0;
+          background: #0EB6EB;
+          box-shadow: none;
+      }
+  }
+
+  .period {
+      color: #FFF;
+      font-family: "Century Gothic";
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+  }
+
+  .point {
+      color: #EBF6FF;
+      text-align: center;
+      font-family: "Century Gothic";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+  }
+
+  .button {
+      background: #1226A8;
       border: none;
-      filter: none;
-    }
+      border-radius: 0;
+
+      color: #FFF;
+      text-align: center;
+      font-family: "Century Gothic";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      box-shadow: none;
+
+      &:active,
+      &:hover {
+          box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.70) inset;
+      }
   }
+}
+
+
+.v5 {
+  background: #283876;
+  min-height: 100vh;
   
-  .blueCountryText {
-    margin-top: -25px;
-    width: 90%;
-    box-sizing: border-box;
-    padding: 7px 0px;
-    border-radius: 50px;
-    background: #00427E;
-    border: 2px solid #FFFFFF;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 13px;
-    text-align: center;
-    color: #FFFFFF;
-  }
-  
-  .country {
+  .pair {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 48%;
-    padding: 8px 34px;
-    box-sizing: border-box;
-    border-radius: 15px;
-    background-color: #EBF6FF;
-  
-    &.blue {
-      background-color: #00427E;
-    }
-  }
-  
-  .countries {
-    width: 100%;
-    margin-top: 17px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    margin: 8px 0 0 0;
+
+    .left, .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 8px 0px;
+      background-color: #33478B;
+      width: 48%;
+    }
+
+    .left  {
+      justify-content: flex-end;
+
+      p {
+        margin-right: 18px;
+        text-align: right;
+      }
+
+      img {
+        margin-right: 21px;
+      }
+    }
+
+    .right  {
+      justify-content: flex-start;
+
+      p {
+        margin-left: 18px;
+        text-align: left;
+      }
+
+      img {
+        margin-left: 21px;
+      }
+    }
+
+    p {
+      color: #FFF;
+      text-align: right;
+      font-family: "DIN Pro";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    img {
+      width: 46px;
+      height: 46px;
+    }
   }
-  
+
+  .header {
+      background-image: url("/assets/v5/bg5.png");
+      width: 100%;
+      background-size: cover;
+      padding: 76px 22px 22px 22px;
+      box-sizing: border-box;
+
+      .text1 {
+          color: #FFF;
+          font-family: "DIN Pro";
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: uppercase;
+      }
+
+      .text2 {
+          color: #FFE600;
+          font-family: "DIN Pro";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: normal;
+          text-transform: uppercase;
+      }
+  }
+
+
+  .periodBorderContainer {
+      width: 100%;
+      height: auto;
+
+      .periodBorder {
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          gap: 5px;
+          padding: 18px 18px;
+          border-radius: 0px;
+          border-width: 0;
+          background: #000C4F;
+          box-shadow: none;
+      }
+  }
+
+  .button {
+      @include selectPointer();
+      background: #FFF;
+      border: none;
+      border-radius: 0;
+      padding: 17px 29px;
+
+      color: #283876;
+      text-align: center;
+      font-family: "DIN Pro";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      text-transform: uppercase;
+
+      box-shadow: none;
+
+      &:active,
+      &:hover {
+          background: #FFF;
+          box-shadow: 0px 0px 8px 1px #283876 inset;
+      }
+  }
+}

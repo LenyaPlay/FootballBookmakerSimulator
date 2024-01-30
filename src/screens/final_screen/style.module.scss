@@ -1,11 +1,16 @@
 @mixin ignorePointer {
     pointer-events: none;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 @mixin cursorPointer {
@@ -29,8 +34,9 @@
         width: 75%;
     }
 
-    
+
 }
+
 .result {
     margin-top: 11px;
     padding-top: 10px;
@@ -281,6 +287,85 @@
             font-weight: 700;
             line-height: normal;
             text-transform: uppercase;
+        }
+
+        .text {
+            color: #FFF;
+            text-align: center;
+            font-family: "Century Gothic";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+}
+
+
+.v5 {
+    min-height: 100vh;
+    background-image: url("/assets/v5/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .text1 {
+        color: #FFF;
+        text-align: center;
+        font-family: "DIN Pro";
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .text2 {
+        color: #FFF;
+        text-align: center;
+        font-family: "DIN Pro";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .result {
+
+        @include cursorPointer();
+        box-sizing: border-box;
+        padding: 5px 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: none;
+        box-shadow: none;
+        filter: none;
+
+        border-radius: 0;
+
+        &.lose {
+            background: #E5050F;;
+        }
+
+        &.win {
+            background: #82D200;
+        }
+
+        .number {
+            margin: 0;
+            color: #FFF;
+            text-align: center;
+            font-family: "DIN Pro";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+
         }
 
         .text {

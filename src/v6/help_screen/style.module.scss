@@ -1,0 +1,60 @@
+.menu {
+    background-image: url("/assets/v6/bg/bg13.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: ce;
+    flex-direction: column;
+
+    img {
+        margin: 0 30px;
+        box-shadow: 0px 0px 1px 1px white;
+    }
+
+    .div1 {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        margin-left: 31px;
+        margin-top: 78px;
+        cursor: pointer;
+        transition: opacity 250ms ease-out;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    h2 {
+        color: #FFF;
+        text-align: center;
+        font-family: "Bebas Neue";
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .text1 {
+        text-align: left;
+        padding: 0px 30px;
+        margin-top: 20px;
+    }
+
+    .text2{
+        margin-top: 4px;
+        margin-bottom: 4px;
+        text-align: left;
+        padding: 0px 30px;
+    }
+}

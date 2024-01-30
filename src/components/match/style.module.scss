@@ -878,3 +878,299 @@
     }
 
 }
+
+
+.v5 {
+    .resultCountry {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .resultCountryRight {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        
+        .countryText {
+            text-align: left;
+        }
+    }
+
+    .countryImage {
+        width: 42px;
+        height: 42px;
+    }
+
+    .imageContainer {
+        position: relative;
+        margin: 13px 0;
+    }
+
+    &.matchContainer{
+        width: 100%;
+        padding : 8px 0px 0px 0px;
+        box-sizing: border-box;
+    }
+
+    .match {
+        background: #33478B;
+        border-radius: 0px;
+        padding: 18px 23px 0px 23px;
+    }
+    
+    .gameText {
+        @include ignorePointer;
+        color: #FFF;
+        text-align: center;
+        font-family: "DIN Pro";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .countryText{
+        @include ignorePointer;
+        margin: 0px;
+
+        color: #FFF;
+        text-align: right;
+        font-family: "DIN Pro";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 5px;
+        text-transform: uppercase;
+        margin-right: 10px;
+
+
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+
+    }
+
+    .countryContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .goalText {
+        color: #FFF;
+        text-align: center;
+        font-family: "DIN Pro";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .betText {
+        @include ignorePointer;
+        color: #1226A8;
+        text-align: center;
+        font-family: "Century Gothic";
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .countryImage {
+        aspect-ratio: 1;
+        background-color: transparent;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        filter: none;
+    }
+
+
+    .textImageContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .winImage {
+        width: 20px;
+        left: -5px;
+        top: -5px;
+
+        border-radius: 0;
+        border: none;
+        filter: none;
+    }
+
+    .divider {
+        background-color: transparent;
+        div {
+            background-color: #00427E88;
+            width: 1px;
+            height: 100%;
+            margin: auto;
+        }
+    }
+
+    .moneyText {
+        color: #FFF;
+        text-align: center;
+        font-family: "DIN Pro";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+                
+        margin: 0;
+        border-radius: 0;
+        padding: 4px 4px;
+        background: #838383;
+        box-shadow: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        position: relative;
+        margin-top: 5px;
+        right: -23px;
+
+
+        &.win {
+            background: #090;
+        }
+
+        &.lose {
+            background: #AB0007;
+        }
+    }
+    
+    .input {
+        background: #FFF;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0px;
+        padding: 7px 7px 7px 0px;
+
+        color: #A2B6F7;
+        font-family: "DIN Pro";
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .inputContainer {
+        margin-bottom: 23px;
+        width: 100%;
+        margin: 0;
+        margin-top: 25px;
+        padding: 0;
+        background-color: #fff;
+        display: flex;
+    }
+
+    .inputContainer::before {
+        content: url("/assets/v5/coin.png");
+        padding: 7px;
+        display: flex;
+        align-items: center;
+    }
+
+    .countries {
+        margin: 0;
+        justify-content: center
+    }
+
+    .force {
+        @include ignorePointer;
+        display: flex;
+        
+        color: #FFF;
+        font-family: "DIN Pro";
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+        margin: 8px 0px;
+    }
+
+    .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 26px;
+    }
+
+    .country {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 13px 0px 16px 0px;
+    }
+
+    .horizontalDivider {
+        background: rgba(235, 246, 255, 0.35);
+        height: 1px;
+        width: 100%;
+    }
+
+    .divider div {
+        padding: 0px;
+        height: 100%;
+        background: rgba(235, 246, 255, 0.35);
+        width: 1px;
+    }
+
+    .betButton {
+        margin: 0;
+        width: 40%;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        padding: 0px 5px;
+        align-items: center;
+        @include selectPointer;
+
+        .outCircle {
+            width: 18px;
+            height: 18px;
+            box-shadow: none;
+            filter: none;
+            border: solid 1px #EBF6FF;
+            padding: 2px;
+
+            .innerCircle {
+                background: #FFE600;
+                filter: none;
+                box-shadow: none;
+            }
+        }
+
+
+        .buttonText {
+            color: #FFF;
+            font-family: "DIN Pro";
+            font-size: 9px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            display: flex;
+        }
+    }
+
+}

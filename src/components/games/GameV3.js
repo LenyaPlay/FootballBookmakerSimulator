@@ -11,7 +11,7 @@ export default function GameV3() {
     useEffect(() => {
         if (localStorage.getItem('is_first') == null) {
             localStorage.setItem('is_first', 'no');
-            setPoints(10000);
+            setPoints(100000);
         }
 
         gameContext.basketball.setRenderer(() => {
@@ -26,6 +26,9 @@ export default function GameV3() {
             setReRender(prev => prev + 1);
         });
 
+        gameContext.volleyball.setRenderer(() => {
+            setReRender(prev => prev + 1);
+        });
 
         gameContext.current.setRenderer(() => {
             setReRender(prev => prev + 1);
